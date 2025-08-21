@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+   <h2> Q1 3rd Graded Exercise submitted by Janver Cabahug of 9Magnesium </h2>
+
+   <input id="guess" type="number" placeholder="Enter a number 1-100">
+   <button onclick="checkIt()">Check</button>
+   <p id="output"></p>
+
+   <script>
+       var dNumber = Math.floor(Math.random() * 100) + 1;
+
+       function checkIt() {
+           var guess = document.getElementById("guess").value;
+
+           if (guess < dNumber) {
+               document.getElementById("output").innerHTML = "The number is higher!";
+           } else if (guess > dNumber) {
+               document.getElementById("output").innerHTML = "The number is lower!";
+           } else {
+               document.getElementById("output").innerHTML = "JACKPOT! You are correct!";
+           }
+       }
+   </script>
+
+</body>
+</html>
